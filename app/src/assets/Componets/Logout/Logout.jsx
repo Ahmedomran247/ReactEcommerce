@@ -1,7 +1,12 @@
 import React from 'react'
 
+
 export default function Logout() {
+  
+
   return (
-    <div>Logout</div>
-  )
+    <div  className='px-12 cursor-pointer'>
+      Logout
+    </div>
+  );
 }

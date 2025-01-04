@@ -6,9 +6,18 @@
 .row{
   @apply flex flex-wrap py-6
 }
-.btn{
-  @apply p-3 py-2 rounded-md text-white
+.btn {
+  @apply p-3 py-2 mb-4 rounded-md text-white;
+  
+
 }
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
