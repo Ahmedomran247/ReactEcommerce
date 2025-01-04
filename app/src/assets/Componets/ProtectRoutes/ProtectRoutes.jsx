@@ -1,13 +1,5 @@
-// import React from 'react';
-// import { Navigate } from 'react-router-dom';
-
-// export default function ProtectRoutes({ children }) {
-//   if (localStorage.getItem('userToken') !== null) {
-//     return children; 
-//   } else {
-//     return <Navigate to="/login" />; 
-//   }
-// }
+import React from 'react';
+import { Navigate } from 'react-router-dom';
 
 export default function ProtectRoutes({ children }) {
   console.log("ProtectRoutes - Checking user authentication");

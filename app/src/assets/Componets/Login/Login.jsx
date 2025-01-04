@@ -3,9 +3,11 @@ import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import { UserContext } from '../../../Context/userContext';
+
 import { CartContext } from '../../../Context/CartContext';
+import { UserContext } from '../../../Context/userContext';
+import FontAwesome from 'react-fontawesome';
+
 
 
 export default function Login() {
@@ -54,13 +56,13 @@ async function submitForm(val) {
 
   return (
     <>
-      <div className="mx-12">
-        <h2 className="font-bold text-2xl">Login</h2>
+      <div className="my-[100px]">
+        
 
         <form onSubmit={formik.handleSubmit} className="max-w-sm mx-auto">
          
           
-          {/* Email Field */}
+          
           <div className="mb-5">
             <label
               htmlFor="email"
@@ -82,7 +84,7 @@ async function submitForm(val) {
             )}
           </div>
 
-          {/* Password Field */}
+          
           <div className="mb-5">
             <label
               htmlFor="password"
@@ -111,7 +113,7 @@ async function submitForm(val) {
             type="submit"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-           {loading ? <i className="fa-solid fa-spinner fa-spin px-1"></i> : "Register Now"}
+           {loading ? <i class="fa-solid fa-spinner"></i> : "Log in"}
            
           </button>
         </form>

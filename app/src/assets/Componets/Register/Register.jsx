@@ -36,19 +36,7 @@ export default function Register() {
       .matches(/^01[0125][0-9]{8}$/, 'Invalid phone number'),
   });
 
-//  async function submitForm(val) {
-//   setloading(true)
-//     let response = await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signup`, val)
-//     .then(
-//       localStorage.setItem('userToken', response.data.token);
-//       (response)=>{Navigate('/login')} )
-//     .catch((response)=>{seterror(response.response.data.message)} ).finally(() => {
-//       setloading(false); 
-//     });
 
-    
-    
-//   }
 async function submitForm(val) {
   try {
     setloading(true); 
@@ -75,11 +63,11 @@ async function submitForm(val) {
 
   return (
     <>
-      <div className="mx-12">
-        <h2 className="font-bold text-2xl">Register Now</h2>
+      <div className="my-[75px]">
+        
 
         <form onSubmit={formik.handleSubmit} className="max-w-sm mx-auto">
-          {/* Name Field */}
+       
           <div className="mb-5">
             <label
               htmlFor="name"
@@ -101,7 +89,7 @@ async function submitForm(val) {
             )}
           </div>
 
-          {/* Email Field */}
+          
           <div className="mb-5">
             <label
               htmlFor="email"
@@ -123,7 +111,7 @@ async function submitForm(val) {
             )}
           </div>
 
-          {/* Password Field */}
+         
           <div className="mb-5">
             <label
               htmlFor="password"
@@ -145,7 +133,7 @@ async function submitForm(val) {
             )}
           </div>
 
-          {/* RePassword Field */}
+          
           <div className="mb-5">
             <label
               htmlFor="rePassword"
@@ -167,8 +155,8 @@ async function submitForm(val) {
             )}
           </div>
 
-          {/* Phone Field */}
-          <div className="mb-5">
+         
+          <div className="my-3">
             <label
               htmlFor="phone"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
