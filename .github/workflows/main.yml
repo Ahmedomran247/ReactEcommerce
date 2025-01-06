@@ -1,0 +1,31 @@
+name: Deploy React app to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # أو الفرع الذي تستخدمه في المشروع الخاص بك
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # تأكد من استخدام النسخة المتوافقة مع مشروعك
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build  # بناء مشروع React في مجلد `build`
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # الفرع الذي سيتم نشر التطبيق عليه
+          folder: build     # مجلد البناء الناتج عن `npm run build`
